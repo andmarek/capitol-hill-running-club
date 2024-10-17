@@ -20,7 +20,7 @@
     <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container px-4 md:px-6 max-w-3xl mx-auto">
             <h1
-                class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-text-dark mb-6"
+                class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-text-dark mb-6 text-center"
             >
                 Our History
             </h1>
@@ -41,7 +41,9 @@
     </section>
     <section class="w-full py-12 md:py-24 lg:py-32 bg-cream-medium">
         <div class="container px-4 md:px-6 max-w-3xl mx-auto">
-            <h2 class="text-3xl font-semibold text-text-dark mb-6">
+            <h2
+                class="text-3xl font-semibold text-text-dark mb-8 text-center relative pb-4"
+            >
                 Frequently Asked Questions
             </h2>
             <div class="space-y-4">
