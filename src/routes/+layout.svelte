@@ -1,13 +1,11 @@
 <script>
     import "../app.css";
-    import { dev } from "$app/environment";
-
-    import { inject } from "@vercel/analytics";
     import "$lib/styles/fonts.css";
+    import Navbar from "$lib/components/navbar.svelte";
+    import { dev } from "$app/environment";
+    import { inject } from "@vercel/analytics";
 
     inject({ mode: dev ? "development" : "production" });
-
-    import Navbar from "$lib/components/navbar.svelte";
 </script>
 
 <div class="app">
