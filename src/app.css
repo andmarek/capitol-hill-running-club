@@ -10,6 +10,7 @@
     --color-bg-0: rgb(202, 216, 228);
     --color-bg-1: hsl(209, 36%, 86%);
     --color-bg-2: hsl(224, 44%, 95%);
+    --color-bg-cream: #f9f4ef;
     --color-theme-1: #ff3e00;
     --color-theme-2: #4075a6;
     --color-text: rgba(0, 0, 0, 0.7);
@@ -24,6 +25,7 @@ body {
     margin: 0;
     background-attachment: fixed;
     background-size: 100vw 100vh;
+    background-color: var(--color-bg-cream);
     background-image: radial-gradient(50% 50% at 50% 50%,
             rgba(255, 255, 255, 0.75) 0%,
             rgba(255, 255, 255, 0) 100%),
