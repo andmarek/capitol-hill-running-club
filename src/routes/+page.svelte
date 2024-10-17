@@ -14,8 +14,9 @@
                         Capitol Hill Running Club
                     </h1>
                     <p class="text-text-light text-lg md:text-xl">
-                        A Seattle-based running club for <em>all</em> members of
-                        the community.
+                        A Seattle-based running club for <strong
+                            ><em>all</em></strong
+                        > members of the community.
                     </p>
                     <div class="flex space-x-4">
                         <Button
@@ -27,12 +28,14 @@
                             Strava
                         </Button>
                         <Button
-                            className="bg-[#E1306C] text-cream-light hover:bg-text-light transition-colors px-6 py-3 rounded-md cursor-not-allowed"
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            className="bg-[#E1306C] text-cream-light hover:bg-[#C13584] transition-colors px-6 py-3 rounded-md cursor-not-allowed"
                         >
-                            Instagram
+                            <span class="flex flex-col items-center">
+                                <span class="flex items-center">
+                                    <Instagram class="w-4 h-4 mr-2" /> Instagram
+                                </span>
+                                <span class="text-xs mt-1">Coming Oct 20</span>
+                            </span>
                         </Button>
                     </div>
                 </div>
