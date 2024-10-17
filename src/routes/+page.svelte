@@ -37,8 +37,9 @@
                             Weekly Runs
                         </h2>
                         <p class="text-text-light">
-                            Join us every Tuesday and Thursday for group runs at
-                            6:30pm at Cal Anderson Park.
+                            Join us every <strong>Tuesday</strong> and
+                            <strong>Thursday</strong> for group runs at
+                            <strong>6:30pm PST</strong>
                         </p>
                     </div>
                     <div
@@ -46,11 +47,12 @@
                     >
                         <Users class="h-8 w-8 text-text-light" />
                         <h2 class="text-xl font-semibold text-text-dark">
-                            All Levels
+                            All Paces
                         </h2>
                         <p class="text-text-light">
-                            From beginners to seasoned runners, everyone is
-                            welcome to participate.
+                            From beginners to seasoned runners, <strong
+                                >we have folks running at all levels</strong
+                            >.
                         </p>
                     </div>
                     <div
@@ -58,11 +60,11 @@
                     >
                         <MapPin class="h-8 w-8 text-text-light" />
                         <h2 class="text-xl font-semibold text-text-dark">
-                            Scenic Routes
+                            Cal Anderson Park
                         </h2>
                         <p class="text-text-light">
-                            Discover the beautiful streets, parks, and hidden
-                            gems of Capitol Hill.
+                            We're currently hosting our runs in Seattle's
+                            largest park.
                         </p>
                     </div>
                 </div>
@@ -85,7 +87,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="outline"
-                            class="border-accent text-text-dark hover:bg-cream-medium transition-colors"
+                            className="border-accent text-text-dark hover:bg-cream-medium transition-colors"
                         >
                             Strava Club
                         </Button>
@@ -94,7 +96,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="outline"
-                            class="border-accent text-text-dark hover:bg-cream-medium transition-colors"
+                            className="border-accent text-text-dark hover:bg-cream-medium transition-colors"
                         >
                             Instagram
                         </Button>
