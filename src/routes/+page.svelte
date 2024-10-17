@@ -17,12 +17,24 @@
                         A Seattle-based running club for <em>all</em> members of
                         the community.
                     </p>
-                    <Button
-                        className="bg-text-dark text-cream-light hover:bg-text-light transition-colors px-6 py-3 rounded-md"
-                        href="/about"
-                    >
-                        Learn More
-                    </Button>
+                    <div class="flex space-x-4">
+                        <Button
+                            className="bg-[#FC4C02] text-cream-light hover:bg-[#E34402] transition-colors px-6 py-3 rounded-md"
+                            href="https://www.strava.com/clubs/1312020"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Strava
+                        </Button>
+                        <Button
+                            className="bg-[#E1306C] text-cream-light hover:bg-text-light transition-colors px-6 py-3 rounded-md cursor-not-allowed"
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Instagram
+                        </Button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -63,8 +75,8 @@
                             Cal Anderson Park
                         </h2>
                         <p class="text-text-light">
-                            We're currently hosting our runs in Seattle's
-                            largest park.
+                            We're hosting our runs at the south-western corner
+                            of Cal Anderson park.
                         </p>
                     </div>
                 </div>
@@ -77,30 +89,9 @@
                         Join Us On A Run
                     </h2>
                     <p class="text-text-light text-lg">
-                        Check our Strava club for upcoming runs and routes, or
-                        follow us on Instagram for the latest updates and
-                        community highlights.
+                        Check our Strava club or Instagram for updates and
+                        community highlights!
                     </p>
-                    <div class="flex space-x-4">
-                        <Button
-                            href="https://www.strava.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="outline"
-                            className="border-accent text-text-dark hover:bg-cream-medium transition-colors"
-                        >
-                            Strava Club
-                        </Button>
-                        <Button
-                            href="https://www.instagram.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="outline"
-                            className="border-accent text-text-dark hover:bg-cream-medium transition-colors"
-                        >
-                            Instagram
-                        </Button>
-                    </div>
                 </div>
             </div>
         </section>

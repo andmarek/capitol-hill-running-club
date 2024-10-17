@@ -16,7 +16,7 @@
     />
 </svelte:head>
 
-<main class="bg-cream-light flex-1">
+<main class="bg-cream-light flex-1 font-mono">
     <section class="w-full py-12 md:py-24 lg:py-32">
         <div class="container px-4 md:px-6 max-w-3xl mx-auto">
             <h1
