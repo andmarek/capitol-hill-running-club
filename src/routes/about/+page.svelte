@@ -37,27 +37,6 @@
                 meets at 6:30pm every Tuesday and Thursday, and 9:00am every
                 Saturday.
             </p>
-            <h2 class="text-2xl font-semibold text-text-dark mb-4">
-                What We Do
-            </h2>
-            <ul class="list-disc list-inside text-text-light text-lg mb-8">
-                <li>
-                    Weekly group runs every Saturday morning and Wednesday
-                    evening
-                </li>
-                <li>
-                    Monthly themed runs exploring different parts of Capitol
-                    Hill
-                </li>
-                <li>
-                    Seasonal social events for members to connect off the
-                    running path
-                </li>
-                <li>Annual participation in local races and marathons</li>
-                <li>
-                    Community outreach and neighborhood clean-up initiatives
-                </li>
-            </ul>
         </div>
     </section>
     <section class="w-full py-12 md:py-24 lg:py-32 bg-cream-medium">

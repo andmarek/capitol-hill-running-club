@@ -15,11 +15,11 @@
     <nav class="ml-auto flex gap-6 font-mono">
         <a
             class="text-sm font-medium text-text-light hover:text-text-dark transition-colors"
-            href="/about">About</a
+            href="/">Home</a
         >
         <a
             class="text-sm font-medium text-text-light hover:text-text-dark transition-colors"
-            href="/events">Events</a
+            href="/about">About</a
         >
         <a
             class="text-sm font-medium text-text-light hover:text-text-dark transition-colors"
