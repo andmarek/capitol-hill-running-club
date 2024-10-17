@@ -26,16 +26,16 @@
             </h1>
             <p class="text-text-light text-lg mb-8">
                 Capitol Hill Running club is a community forged from the
-                previously-existing Fleet Feet running group. Since Fleet Feet
-                has closed (rip), we have decided to start our own,
-                unaffiliated, running club, in order to keep the community alive
-                and thriving.
+                previously-existing Fleet Feet running group. Since the Capitol
+                Hill Fleet Feet store is closing (rip), we have decided to start
+                our own, unaffiliated, running club, in order to keep the
+                community alive and thriving.
             </p>
             <p class="text-text-light text-lg mb-8">
                 We will still be hosting our runs near Fleet Feet, about 150ft
                 away, at the Southern entrance of Cal Anderson Park. The group
                 meets at 6:00pm every Tuesday and Thursday, and 9:00am every
-                Saturday
+                Saturday.
             </p>
         </div>
     </section>
