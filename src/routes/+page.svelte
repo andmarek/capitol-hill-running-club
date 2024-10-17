@@ -100,23 +100,5 @@
             </div>
         </section>
     </main>
-    <footer class="py-6 px-4 md:px-6 border-t border-cream-dark">
-        <div
-            class="container max-w-4xl mx-auto flex justify-between items-center"
-        >
-            <p class="text-xs text-text-light">
-                © 2024 Capitol Hill Running Club
-            </p>
-            <nav class="flex gap-4">
-                <a
-                    class="text-xs text-text-light hover:text-text-dark transition-colors"
-                    href="#">Privacy Policy</a
-                >
-                <a
-                    class="text-xs text-text-light hover:text-text-dark transition-colors"
-                    href="#">Contact Us</a
-                >
-            </nav>
-        </div>
-    </footer>
+    <footer class="py-6 px-4 md:px-6 border-t border-cream-dark"></footer>
 </div>
