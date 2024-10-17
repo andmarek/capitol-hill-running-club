@@ -3,88 +3,64 @@
     import { MapPin, Calendar, Users, Instagram } from "lucide-svelte";
 </script>
 
-<div class="flex flex-col min-h-screen bg-stone-50">
-    <header
-        class="px-4 lg:px-6 h-16 flex items-center border-b border-stone-200"
-    >
-        <div class="container mx-auto flex justify-between items-center">
-            <a class="flex items-center justify-center" href="#">
-                <MapPin class="h-6 w-6 text-stone-600" />
-                <span class="ml-2 text-lg font-semibold text-stone-800"
-                    >Capitol Hill Running Club</span
-                >
-            </a>
-            <nav class="flex gap-4 sm:gap-6">
-                <a
-                    class="text-sm font-medium text-stone-600 hover:text-stone-800"
-                    href="#">About</a
-                >
-                <a
-                    class="text-sm font-medium text-stone-600 hover:text-stone-800"
-                    href="#">Events</a
-                >
-                <a
-                    class="text-sm font-medium text-stone-600 hover:text-stone-800"
-                    href="https://www.strava.com"
-                    target="_blank"
-                    rel="noopener noreferrer">Strava</a
-                >
-                <a
-                    class="text-sm font-medium text-stone-600 hover:text-stone-800"
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Instagram class="h-5 w-5" />
-                </a>
-            </nav>
-        </div>
-    </header>
+<div class="flex flex-col min-h-screen bg-cream-light font-mono">
     <main class="flex-1">
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-stone-100">
-            <div class="container mx-auto px-4 md:px-6 max-w-4xl">
-                <div class="flex flex-col items-center space-y-4 text-center">
+        <section class="w-full py-20 md:py-32">
+            <div class="container px-4 md:px-6 max-w-3xl mx-auto">
+                <div class="flex flex-col items-center space-y-6 text-center">
                     <h1
-                        class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl text-stone-800"
+                        class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl text-text-dark"
                     >
                         Capitol Hill Running Club
                     </h1>
-                    <p class="mx-auto max-w-[600px] text-stone-600 md:text-xl">
-                        Explore Seattle's vibrant Capitol Hill neighborhood on
-                        foot with our welcoming community of runners.
+                    <p class="text-text-light text-lg md:text-xl">
+                        A Seattle-based running club for <em>all</em> members of
+                        the community.
                     </p>
+                    <Button
+                        className="bg-text-dark text-cream-light hover:bg-text-light transition-colors px-6 py-3 rounded-md"
+                        href="/about"
+                    >
+                        Learn More
+                    </Button>
                 </div>
             </div>
         </section>
-        <section class="w-full py-12 md:py-24 lg:py-32">
-            <div class="container mx-auto px-4 md:px-6 max-w-6xl">
-                <div class="grid gap-10 sm:grid-cols-3">
-                    <div class="flex flex-col items-center space-y-2 p-4">
-                        <Calendar class="h-10 w-10 text-stone-600" />
-                        <h2 class="text-xl font-semibold text-stone-800">
+        <section class="w-full py-20 bg-cream-medium">
+            <div class="container px-4 md:px-6 max-w-4xl mx-auto">
+                <div class="grid gap-12 sm:grid-cols-3">
+                    <div
+                        class="flex flex-col items-center space-y-2 text-center"
+                    >
+                        <Calendar class="h-8 w-8 text-text-light" />
+                        <h2 class="text-xl font-semibold text-text-dark">
                             Weekly Runs
                         </h2>
-                        <p class="text-sm text-stone-600 text-center">
-                            Join us every Saturday morning and Wednesday evening
-                            for group runs.
+                        <p class="text-text-light">
+                            Join us every Tuesday and Thursday for group runs at
+                            6:30pm at Cal Anderson Park.
                         </p>
                     </div>
-                    <div class="flex flex-col items-center space-y-2 p-4">
-                        <Users class="h-10 w-10 text-stone-600" />
-                        <h2 class="text-xl font-semibold text-stone-800">
+                    <div
+                        class="flex flex-col items-center space-y-2 text-center"
+                    >
+                        <Users class="h-8 w-8 text-text-light" />
+                        <h2 class="text-xl font-semibold text-text-dark">
                             All Levels
                         </h2>
-                        <p class="text-sm text-stone-600 text-center">
+                        <p class="text-text-light">
                             From beginners to seasoned runners, everyone is
                             welcome to participate.
                         </p>
                     </div>
-                    <div class="flex flex-col items-center space-y-2 p-4">
-                        <MapPin class="h-10 w-10 text-stone-600" />
-                        <h2 class="text-xl font-semibold text-stone-800">
+                    <div
+                        class="flex flex-col items-center space-y-2 text-center"
+                    >
+                        <MapPin class="h-8 w-8 text-text-light" />
+                        <h2 class="text-xl font-semibold text-text-dark">
                             Scenic Routes
                         </h2>
-                        <p class="text-sm text-stone-600 text-center">
+                        <p class="text-text-light">
                             Discover the beautiful streets, parks, and hidden
                             gems of Capitol Hill.
                         </p>
@@ -92,15 +68,13 @@
                 </div>
             </div>
         </section>
-        <section class="w-full py-12 md:py-24 lg:py-32 bg-stone-100">
-            <div class="container mx-auto px-4 md:px-6 max-w-4xl">
-                <div class="flex flex-col items-center space-y-4 text-center">
-                    <h2
-                        class="text-3xl font-semibold tracking-tighter sm:text-4xl text-stone-800"
-                    >
+        <section class="w-full py-20">
+            <div class="container px-4 md:px-6 max-w-3xl mx-auto">
+                <div class="flex flex-col items-center space-y-6 text-center">
+                    <h2 class="text-3xl font-semibold text-text-dark">
                         Join Us On A Run
                     </h2>
-                    <p class="mx-auto max-w-[600px] text-stone-600 md:text-xl">
+                    <p class="text-text-light text-lg">
                         Check our Strava club for upcoming runs and routes, or
                         follow us on Instagram for the latest updates and
                         community highlights.
@@ -111,7 +85,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="outline"
-                            class="bg-stone-100 text-stone-800 border-stone-300 hover:bg-stone-200"
+                            class="border-accent text-text-dark hover:bg-cream-medium transition-colors"
                         >
                             Strava Club
                         </Button>
@@ -120,7 +94,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="outline"
-                            class="bg-stone-100 text-stone-800 border-stone-300 hover:bg-stone-200"
+                            class="border-accent text-text-dark hover:bg-cream-medium transition-colors"
                         >
                             Instagram
                         </Button>
@@ -129,19 +103,21 @@
             </div>
         </section>
     </main>
-    <footer class="py-6 border-t border-stone-200">
+    <footer class="py-6 px-4 md:px-6 border-t border-cream-dark">
         <div
-            class="container mx-auto px-4 md:px-6 flex justify-between items-center"
+            class="container max-w-4xl mx-auto flex justify-between items-center"
         >
-            <p class="text-xs text-stone-600">
+            <p class="text-xs text-text-light">
                 © 2024 Capitol Hill Running Club
             </p>
-            <nav class="flex gap-4 sm:gap-6">
-                <a class="text-xs text-stone-600 hover:underline" href="#"
-                    >Privacy Policy</a
+            <nav class="flex gap-4">
+                <a
+                    class="text-xs text-text-light hover:text-text-dark transition-colors"
+                    href="#">Privacy Policy</a
                 >
-                <a class="text-xs text-stone-600 hover:underline" href="#"
-                    >Contact Us</a
+                <a
+                    class="text-xs text-text-light hover:text-text-dark transition-colors"
+                    href="#">Contact Us</a
                 >
             </nav>
         </div>
