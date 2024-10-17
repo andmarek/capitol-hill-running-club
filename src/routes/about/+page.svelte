@@ -34,8 +34,8 @@
             <p class="text-text-light text-lg mb-8">
                 We will still be hosting our runs near Fleet Feet, about 150ft
                 away, at the Southern entrance of Cal Anderson Park. The group
-                meets at 6:30pm every Tuesday and Thursday, and 9:00am every
-                Saturday.
+                meets at 6:00pm every Tuesday and Thursday, and 9:00am every
+                Saturday
             </p>
         </div>
     </section>
