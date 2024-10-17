@@ -98,10 +98,10 @@
                                     weather-appropriate clothing, and a great
                                     attitude.
                                 {:else if i === 4}
-                                    Our Wednesday runs are 10k (6 miles in
+                                    Our Wednesday runs are 10k (6.2 miles in
                                     American units), and our Thursday runs are
-                                    5k (3 miles in American units). Click here
-                                    for the routes on Strava.
+                                    5k (3.1 miles in American units). Check out
+                                    our Strava for our typical routes.
                                 {/if}
                             </div>
                         {/if}
