@@ -54,8 +54,7 @@
                         <p class="text-text-light">
                             Join us every <strong>Tuesday</strong> and
                             <strong>Thursday</strong> for group runs at
-                            <strong>6:00pm PT. </strong> Also
-                            <strong>Saturdays at 9:00am PT! </strong>
+                            <strong>6:00pm PT. </strong>
                         </p>
                     </div>
                     <div
