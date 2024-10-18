@@ -1,10 +1,33 @@
 <script lang="ts">
     import { slide } from "svelte/transition";
 
+    const faqs = [
+        {
+            question: "Do I need to be an experienced runner to join?",
+            answer: "Not at all! We welcome runners of all levels, including beginners. Our runs typically have multiple pace groups to accommodate everyone.",
+        },
+        {
+            question: "What is the vibe?",
+            answer: "The vibe is chill! There is usually around 20-30 people that come on Tuesdays and up to 100 people that come on Thursdays. We run in all weather, and most people are there to have fun, get fit, and chit chat. There will be folks who run all paces (think 12 min / mile to 7 min / mile). We also go to Stoup Brewery on Thursdays.",
+        },
+        {
+            question: "Where do the runs typically start?",
+            answer: "We almost always meet at Cal Anderson park! Check our Strava club or Instagram for the most up-to-date information.",
+        },
+        {
+            question: "What should I bring to a run?",
+            answer: "Comfortable running shoes, weather-appropriate clothing, and a great attitude.",
+        },
+        {
+            question: "How long are the typical runs?",
+            answer: "Our Tuesday runs are 10km (6.2 miles in American units), and our Thursday runs are 5km (3.1 miles in American units). Check out our Strava for our typical routes.",
+        },
+    ];
+
     let activeItem: number | null = null;
 
-    function toggleItem(item: number): void {
-        activeItem = activeItem === item ? null : item;
+    function toggleItem(index: number): void {
+        activeItem = activeItem === index ? null : index;
     }
 </script>
 
@@ -47,13 +70,13 @@
                 Frequently Asked Questions
             </h2>
             <div class="space-y-4">
-                {#each ["Do I need to be an experienced runner to join?", "What is the vibe?", "Where do the runs typically start?", "What should I bring to a run?", "How long are the typical runs?"] as question, i}
+                {#each faqs as faq, i}
                     <div class="border-b border-accent">
                         <button
                             on:click={() => toggleItem(i)}
                             class="flex justify-between items-center w-full py-4 text-left text-text-dark font-medium focus:outline-none"
                         >
-                            {question}
+                            {faq.question}
                             <svg
                                 class="w-4 h-4 transition-transform {activeItem ===
                                 i
@@ -77,34 +100,7 @@
                                 transition:slide={{ duration: 300 }}
                                 class="pb-4 text-text-light"
                             >
-                                {#if i === 0}
-                                    Not at all! We welcome runners of all
-                                    levels, including beginners. Our runs
-                                    typically have multiple pace groups to
-                                    accommodate everyone.
-                                {:else if i === 1}
-                                    The vibe is chill! There is usually around
-                                    20-30 people that come on Tuesdays and up to
-                                    100 people that come on Thursdays. We run in
-                                    all weather, and most people are there to
-                                    have fun, get fit, and chit chat. There will
-                                    be folks who run all paces (think 12 min /
-                                    mile to 7 min / mile). We also go to Stoup
-                                    Brewery on Thursdays.
-                                {:else if i === 2}
-                                    We almost always meet at Cal Anderson park!
-                                    Check our Strava club or Instagram for the
-                                    most up-to-date information.
-                                {:else if i === 3}
-                                    Comfortable running shoes,
-                                    weather-appropriate clothing, and a great
-                                    attitude.
-                                {:else if i === 4}
-                                    Our Tuesday runs are 10km (6.2 miles in
-                                    American units), and our Thursday runs are
-                                    5km (3.1 miles in American units). Check out
-                                    our Strava for our typical routes.
-                                {/if}
+                                {faq.answer}
                             </div>
                         {/if}
                     </div>

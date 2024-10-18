@@ -55,7 +55,7 @@
                             Join us every <strong>Tuesday</strong> and
                             <strong>Thursday</strong> for group runs at
                             <strong>6:00pm PST. </strong> Also
-                            <strong>Saturdays at 9:00am PST! </strong>
+                            <strong>Saturdays at 9:00am PT! </strong>
                         </p>
                     </div>
                     <div
