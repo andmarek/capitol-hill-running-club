@@ -1,6 +1,7 @@
 <script lang="ts">
     import { slide } from "svelte/transition";
 
+    import { onMount } from "svelte";
     const faqs = [
         {
             question: "Do I need to be an experienced runner to join?",
@@ -25,6 +26,11 @@
     ];
 
     let activeItem: number | null = null;
+
+    onMount(() => {
+        // Reset activeItem when the component mounts
+        activeItem = null;
+    });
 
     function toggleItem(index: number): void {
         activeItem = activeItem === index ? null : index;
