@@ -12,7 +12,7 @@
     <title>About Capitol Hill Running Club</title>
     <meta
         name="description"
-        content="Learn about the Capitol Hill Running Club in Seattle"
+        content="Join Capitol Hill Running Club for community runs in Seattle. All levels welcome, weekly group runs and events."
     />
 </svelte:head>
 
@@ -100,9 +100,9 @@
                                     weather-appropriate clothing, and a great
                                     attitude.
                                 {:else if i === 4}
-                                    Our Wednesday runs are 10k (6.2 miles in
+                                    Our Tuesday runs are 10km (6.2 miles in
                                     American units), and our Thursday runs are
-                                    5k (3.1 miles in American units). Check out
+                                    5km (3.1 miles in American units). Check out
                                     our Strava for our typical routes.
                                 {/if}
                             </div>
