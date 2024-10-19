@@ -28,13 +28,14 @@
                             Strava
                         </Button>
                         <Button
-                            className="bg-[#E1306C] text-cream-light hover:bg-[#C13584] transition-colors px-6 py-3 rounded-md cursor-not-allowed"
+                            className="bg-[#E1306C] text-cream-light hover:bg-[#C13584] transition-colors px-6 py-3 rounded-md"
+                            href="https://instagram.com/chrunclub"
+                            rel="noopener noreferrer"
                         >
                             <span class="flex flex-col items-center">
                                 <span class="flex items-center">
                                     <Instagram class="w-4 h-4 mr-2" /> Instagram
                                 </span>
-                                <span class="text-xs mt-1">Coming Oct 20</span>
                             </span>
                         </Button>
                     </div>
