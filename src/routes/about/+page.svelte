@@ -1,5 +1,7 @@
 <script lang="ts">
     import { slide } from "svelte/transition";
+    import ActivityMap from "$lib/components/map.svelte";
+    import { browser } from "$app/environment";
 
     import { onMount } from "svelte";
     const faqs = [
@@ -51,20 +53,44 @@
             <h1
                 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-text-dark mb-6 text-center"
             >
-                Our History
+                Who We Are
             </h1>
             <p class="text-text-light text-lg mb-8">
-                Capitol Hill Running club is a community forged from the
-                previously-existing Fleet Feet running group. Since the Capitol
-                Hill Fleet Feet store is closing (rip), we have decided to start
-                our own, unaffiliated, running club, in order to keep the
-                community alive and thriving.
+                Born from the legacy of the Fleet Feet running group, Capitol
+                Hill Running Club is a community-driven organization dedicated
+                to bringing local runners together. Following the closure of the
+                Capitol Hill Fleet Feet store, we've established this
+                independent running club to preserve and grow our vibrant
+                running community.
             </p>
             <p class="text-text-light text-lg mb-8">
                 We will still be hosting our runs near Fleet Feet, about 150ft
                 away, at the Southern entrance of Cal Anderson Park. The group
                 meets at 6:00pm every Tuesday and Thursday.
             </p>
+            <h2 class="text-2xl font-semibold text-text-dark mb-4">
+                Meeting Details
+            </h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>
+                    <strong>When:</strong>
+                    <ul class="list-disc pl-5">
+                        <li>Every Tuesday and Thursday</li>
+                        <li>6:00 PM PT</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Where:</strong>
+                    <ul class="list-disc pl-5">
+                        <li>Cal Anderson Park - Southern Entrance</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="w-full max-w-3xl mx-auto px-4 mb-12 py-4">
+            {#if browser}
+                <ActivityMap latitude={47.615508} longitude={-122.319613} />
+            {/if}
         </div>
     </section>
     <section class="w-full py-12 md:py-24 lg:py-32 bg-cream-medium">
