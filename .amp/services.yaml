@@ -1,0 +1,5 @@
+services:
+  web:
+    command: npm run dev -- --host 127.0.0.1 --port "$PORT" --strictPort
+    portal:
+      title: Capitol Hill Running Club
