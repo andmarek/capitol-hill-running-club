@@ -1,68 +1,47 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import { browser } from "$app/environment";
-    import type { Map as LeafletMap, LatLngExpression } from "leaflet";
+    import { onDestroy, onMount } from "svelte";
+    import type { Map } from "maplibre-gl";
+    import "maplibre-gl/dist/maplibre-gl.css";
+    // MapLibre finds its worker next to its own module, which Vite moves when bundling.
+    import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 
     export let latitude: number;
     export let longitude: number;
 
-    let map: LeafletMap;
+    let map: Map | undefined;
     let mapElement: HTMLElement;
 
-    let L: any; // This will hold the Leaflet library
-
     onMount(async () => {
-        if (browser) {
-            const leaflet = await import("leaflet");
-            L = leaflet.default;
-            initMap();
-        }
-    });
-    function initMap() {
-        map = L.map(mapElement, {
-            zoomControl: true,
-            scrollWheelZoom: true,
-        }).setView([latitude, longitude], 17);
+        const { Map, Marker, NavigationControl, Popup, setWorkerUrl } =
+            await import("maplibre-gl");
+        setWorkerUrl(workerUrl);
 
-        L.tileLayer(
-            "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            {
-                subdomains: "abcd",
-                maxZoom: 20,
-            },
-        ).addTo(map);
+        map = new Map({
+            container: mapElement,
+            style: "https://tiles.openfreemap.org/styles/bright",
+            center: [longitude, latitude],
+            zoom: 16,
+        });
+        map.addControl(new NavigationControl({ showCompass: false }));
 
-        L.control
-            .zoom({
-                position: "bottomright",
-            })
+        const markerElement = document.createElement("div");
+        markerElement.innerHTML = '<div class="marker-inner"></div>';
+        const tooltip = new Popup({
+            closeButton: false,
+            closeOnClick: false,
+            offset: 18,
+            className: "custom-tooltip",
+        }).setText("Meeting Point");
+        const marker = new Marker({ element: markerElement })
+            .setLngLat([longitude, latitude])
             .addTo(map);
+        markerElement.addEventListener("mouseenter", () =>
+            tooltip.setLngLat(marker.getLngLat()).addTo(map!),
+        );
+        markerElement.addEventListener("mouseleave", () => tooltip.remove());
+    });
 
-        addMarker();
-    }
-
-    function addMarker() {
-        if (map) {
-            const markerIcon = L.divIcon({
-                className: "custom-marker",
-                html: '<div class="marker-inner"></div>',
-                iconSize: [30, 30],
-                iconAnchor: [15, 15],
-            });
-
-            L.marker([latitude, longitude] as LatLngExpression, {
-                icon: markerIcon,
-            })
-                .addTo(map)
-                .bindTooltip("Meeting Point", {
-                    permanent: false,
-                    direction: "top",
-                    offset: [0, -10],
-                    opacity: 0.9,
-                    className: "custom-tooltip",
-                });
-        }
-    }
+    onDestroy(() => map?.remove());
 </script>
 
 <div
@@ -71,10 +50,6 @@
 ></div>
 
 <style>
-    :global(.custom-marker) {
-        background: none;
-        border: none;
-    }
     :global(.marker-inner) {
         width: 30px;
         height: 30px;
@@ -88,13 +63,15 @@
         transform: scale(1.1);
         background-color: #45a049;
     }
-    :global(.custom-tooltip) {
+    :global(.custom-tooltip .maplibregl-popup-content) {
         background-color: rgba(0, 0, 0, 0.8);
-        border: none;
         border-radius: 4px;
         padding: 5px 8px;
         color: white;
         font-size: 12px;
         font-weight: bold;
+    }
+    :global(.custom-tooltip .maplibregl-popup-tip) {
+        display: none;
     }
 </style>
